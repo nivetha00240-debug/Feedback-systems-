@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>⭐ Feedback System</h1>
+  <p>Tell us how we did!</p>
+</header>
+
+<div class="container">
+  <!-- Feedback Form -->
+  <div class="form-box">
+    <h2>Give Feedback</h2>
+    <input type="text" id="name" placeholder="Your Name *">
+    <input type="email" id="email" placeholder="Your Email">
+    <select id="category">
+      <option value="Product">Product</option>
+      <option value="Service">Service</option>
+      <option value="Website">Website</option>
+      <option value="Delivery">Delivery</option>
+    </select>
+
+    <div class="stars" id="stars">
+      <span onclick="setRating(1)">★</span>
+      <span onclick="setRating(2)">★</span>
+      <span onclick="setRating(3)">★</span>
+      <span onclick="setRating(4)">★</span>
+      <span onclick="setRating(5)">★</span>
+    </div>
+    <p id="ratingText">Click a star to rate</p>
+
+    <textarea id="message" rows="4" placeholder="Write your feedback..."></textarea>
+    <button onclick="submitFeedback()">Submit Feedback</button>
+    <p id="msg"></p>
+  </div>
+
+  <!-- Feedback List -->
+  <div class="list-box">
+    <div class="list-head">
+      <h2>All Feedbacks (<span id="count">0</span>)</h2>
+      <div>
+        <select id="filter" onchange="loadFeedbacks()">
+          <option value="all">All</option>
+          <option value="5">5 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="3">3 Stars</option>
+        </select>
+        <button class="avg-btn">Avg: <span id="avg">0</span> ⭐</button>
+      </div>
+    </div>
+    <div id="feedbackList"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
