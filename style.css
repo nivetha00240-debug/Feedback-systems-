@@ -1,0 +1,150 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+body{
+  background:#f0f2f5;
+}
+header{
+  background:#6a11cb;
+  background:linear-gradient(135deg,#6a11cb,#2575fc);
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+}
+header p{
+  margin-top:5px;
+  opacity:0.9;
+}
+.container{
+  max-width:1000px;
+  margin:20px auto;
+  padding:0 15px;
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:20px;
+}
+.form-box, .list-box{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 2px 10px #ddd;
+  height:fit-content;
+}
+.form-box h2, .list-box h2{
+  margin-bottom:15px;
+}
+.form-box input, .form-box select, .form-box textarea{
+  width:100%;
+  padding:11px;
+  margin-bottom:12px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  outline:none;
+  font-size:14px;
+}
+.form-box input:focus, .form-box textarea:focus{
+  border-color:#6a11cb;
+}
+.stars{
+  font-size:35px;
+  text-align:center;
+  cursor:pointer;
+  color:#ddd;
+  letter-spacing:5px;
+}
+.stars span.active{
+  color:#ffc107;
+}
+#ratingText{
+  text-align:center;
+  font-size:13px;
+  color:gray;
+  margin-bottom:10px;
+}
+.form-box button{
+  width:100%;
+  padding:12px;
+  background:#6a11cb;
+  color:white;
+  border:none;
+  border-radius:10px;
+  font-weight:bold;
+  font-size:16px;
+  cursor:pointer;
+}
+.form-box button:hover{
+  background:#2575fc;
+}
+#msg{
+  text-align:center;
+  margin-top:10px;
+  font-weight:bold;
+  color:green;
+}
+.list-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.list-head select{
+  padding:7px;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+.avg-btn{
+  background:#fff3cd;
+  border:1px solid #ffc107;
+  padding:7px 12px;
+  border-radius:20px;
+  font-weight:bold;
+  cursor:default;
+}
+.feedback-card{
+  border:1px solid #eee;
+  padding:15px;
+  border-radius:12px;
+  margin-top:15px;
+}
+.feedback-card h3{
+  display:flex;
+  justify-content:space-between;
+}
+.feedback-card h3 span{
+  color:#ffc107;
+}
+.feedback-card .cat{
+  background:#e8e0ff;
+  color:#6a11cb;
+  font-size:11px;
+  padding:3px 10px;
+  border-radius:20px;
+  display:inline-block;
+  margin:8px 0;
+}
+.feedback-card p{
+  color:#444;
+  line-height:1.5;
+}
+.feedback-card small{
+  color:gray;
+}
+.delete-btn{
+  background:#ffebee;
+  color:red;
+  border:none;
+  padding:5px 10px;
+  border-radius:8px;
+  cursor:pointer;
+  float:right;
+  font-size:12px;
+}
+@media(max-width:700px){
+  .container{
+    grid-template-columns:1fr;
+  }
+}
